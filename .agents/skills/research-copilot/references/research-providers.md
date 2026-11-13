@@ -14,7 +14,7 @@
 | 用户明确要求完整研究至论文流程 | `ars/academic-pipeline/WORKFLOW.md` |
 | 用户明确要求已有文献记录筛选 | `ars/sr-screener/WORKFLOW.md` |
 
-调用意味着读取对应方法和必要资源，用当前 Codex 工具实际完成工作。纯论文讨论可以使用本地讨论规则，所需背景核查调用 ARS deep-research。子 agent 使用它时由主 agent 提供入口绝对路径。
+调用意味着读取对应方法和必要资源，用当前 Codex 工具实际完成工作。论文创新讨论先用本地讨论规则开展具体分析，所需背景与近邻核查调用 ARS deep-research 的检索、综合和反向论证方法。上游 socratic 或教学模式仅在用户明确要求时进入。子 agent 使用它时由主 agent 提供入口绝对路径。
 
 ## 按当前请求适配
 

@@ -11,6 +11,9 @@
     "G": ["Diagnose engineering failure first", "Keep hypothesis untested", "Preserve failed run evidence"],
     "H": ["Read current state and handoff", "Preserve parked decision", "Respect existing training authorization boundary"],
     "I": ["Continue cause analysis", "Retain optional writing stage"],
-    "J": ["Use main-agent role fallback", "Keep research workflow functional", "Use available tools without new API credentials"]
+    "J": ["Use main-agent role fallback", "Keep research workflow functional", "Use available tools without new API credentials"],
+    "K": ["Analyze available paper immediately", "Discuss mechanism, confounding and falsifying controls", "No reading assignment or comprehension prerequisite"],
+    "L": ["Bound the absence-of-opportunity judgment to supplied material", "Actually organize task, method, metrics and evidence", "No invented novelty or forced idea quota"],
+    "M": ["Honor explicit guided-reading request", "Provide a small passage and one understanding question"]
   }
 }
