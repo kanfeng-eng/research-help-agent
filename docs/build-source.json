@@ -4,5 +4,16 @@
   "use": "Build specification supplied by the user; runtime behavior is in AGENTS.md and research-copilot",
   "primaryProvider": "ARS-Codex",
   "globalInstall": false,
-  "researchMemoryInitialized": false
+  "researchMemoryInitialized": false,
+  "latestRequirements": {
+    "sourceName": "生成科研助手.md",
+    "sourceSha256": "4e5f3bc8844cb6f45bb5ac3f49f75294f7f8f7324fd29f33acfff4fe5aa4ddf7",
+    "confirmedOn": "2026-11-13",
+    "discussionPriority": "User-confirmed innovation discussion first, paper synthesis when no grounded opportunity emerges",
+    "approvedRefinements": [
+      "automatic project memory initialization and useful incremental records",
+      "ARS stage-record path mapping into project memory",
+      "nine-category evidence check before manuscript writing"
+    ]
+  }
 }

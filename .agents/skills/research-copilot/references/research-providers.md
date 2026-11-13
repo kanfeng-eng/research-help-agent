@@ -18,6 +18,26 @@
 
 ## 按当前请求适配
 
+### 阶段产物路径映射
+
+以下路径统一相对已明确的科研项目根目录。主 agent 在调用或委派前将路径展开成该项目内的绝对路径，沿用已有 ID、目录和用户内容。子 agent 默认返回分析，由主 agent 写正式记忆；明确授权的代码和实验产物写入范围另行给出。
+
+| ARS 工作 | 正式研究记录位置 |
+| --- | --- |
+| deep-research 的论文分析、来源与阅读范围 | `memory/papers/Paper_<ID>.md`、`memory/03_Literature_Index.md`，需要来源台账时放 `memory/papers/<ID>/` |
+| 研究问题、跨论文综合与近邻检索 | `memory/04_Cross_Paper_Analysis.md`、`memory/05_Research_Gaps.md`、`memory/07_Open_Questions.md` |
+| 假设反向审查与成熟 IDEA | 初步观察和假设进入 `memory/05_Research_Gaps.md`；成熟构想进入 `memory/ideas/IDEA_<ID>.md`，研究员观点进入 `memory/02_Researcher_Ideas.md` |
+| experiment-agent 的 plan、run、validate | `memory/experiments/<ID>/Experiment_Plan.md`、`Experiment_Log.md`、`Result_Analysis.md`；必要的阶段元信息放同一实验子目录 |
+| 写作准备与主张依据 | `memory/Writing_Readiness.md`，记录逐项证据、缺口和可写范围 |
+| 稿件评审、回复与文献筛选的过程记录 | 按需放 `memory/reviews/<ID>/`、`memory/literature-screening/<ID>/`，并链接对应论文、决策和来源 |
+| 完整 pipeline 的阶段状态、Material Passport、交接与决策 | 状态汇总到 `memory/00_Current_State.md`，交接进入 `memory/08_Research_Handoff.md`，决策进入 `memory/06_Decision_Log.md`；阶段元信息嵌入相应记录或放其同级子目录 |
+
+论文 PDF、全文提取、大型筛选表、代码、原始日志、权重、正式稿件和交付的 HTML 笔记使用用户指定或项目已有的资料/代码/产物目录，记忆保存路径、版本及摘要。目录和文件按真实产物创建。
+
+上游 workflow 示例中的状态目录、阶段文件名或相对工作目录，都需先映射到此表。已有 ARS 记录先读取和关联，合并时保留来源与历史。一次调用开始与结束均核对实际落点，正式研究记录统一进入项目 `memory/`。
+
+### 本地流程与上游方法
+
 用户文档选择了长期探索、可回退、最小实验和可选写作。本地主流程遵循这些选择，ARS 作为当前阶段的专业方法来源。
 
 - 方向、阶段、资源投入与正式决策按照用户当前请求及已确认记忆。
@@ -25,7 +45,7 @@
 - 日常假设审查加载 deep-research 的反向论证方法，按本地创新审查合同返回机制、反例、竞争解释和最小检验。正式稿件审阅由用户明确要求后进入 academic-paper-reviewer，遵循该 workflow 的角色卡片、入口确认及用户明确授权的跳过规则。实际流程和研究员已有授权保持一致。
 - 上游特定模型、API、MCP、Claude 命令或外部服务示例需检查本环境。使用已有 Codex、搜索、shell 与文件工具完成其实际目的，缺能力时报告真实缺口。
 - 上游实验模块默认只运行用户提供的命令，本包同时支持用户授权的实现、调试和预算内重试，按本地实验协议记录变化。
-- 正式科研记忆由本地项目 `memory/` 维护。ARS 需要的阶段产物可保存在对应论文、IDEA 或实验子目录，避免生成两套冲突的研究状态。
+- 正式科研记忆按上面的路径表维护，阶段状态复用项目当前状态和交接。上游写作入口先执行本地写作前核查，随后按实际可写范围调用。
 
 ## 刚才检索到的其他方案
 

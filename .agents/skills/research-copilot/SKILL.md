@@ -2,7 +2,7 @@
 name: research-copilot
 description: Discuss research opportunities from papers and evidence, critically examine ideas and mechanisms, and organize the paper's reasoning when no grounded opportunity emerges. Also support cross-paper synthesis, minimal experiments, result analysis and project research memory. Guided reading applies only when explicitly requested.
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Research Copilot
@@ -20,11 +20,11 @@ metadata:
 ## 每次进入
 
 1. 区分构建配置包与开展科研。本包的维护工作保持构建模式。
-2. 项目研究先定位实际根目录，读取 `<project>/memory/README.md`、`00_Current_State.md`、`08_Research_Handoff.md`，再按问题读取相关记录。单篇临时讨论可以直接分析已有材料，记忆写入时再确认项目位置。用户限定只读、仅用给定片段或特定任务范围时按该范围开展。记忆中的历史命令需按当前授权重新判断。
+2. 项目研究先定位实际根目录，初始化或加载 `<project>/memory/`，读取索引、当前状态和交接，再按问题读取相关记录。明确项目内的讨论默认持续记录有价值的增量。只有用户明确要求临时讨论、不保存或只读时，采用对应范围；仅限定资料来源时仍按项目规则保存。尚无明确项目的单篇讨论可先分析材料，保存前确认位置。记忆中的历史命令需按当前授权重新判断。
 3. 从上下文提取方向、用户想法、已读资料、进展、当前问题及数据/GPU/时间约束。已记录的信息直接沿用。仅缺少影响下一步的必要信息时问一个问题，允许方向暂时宽泛。
 4. 选择本次模式及必要的 ARS 能力。对专业任务按需委派，并给出来源、结论范围和实际执行状态。
 
-实际科研项目已明确时，可运行 `python scripts/init_memory.py --project-root <绝对路径>` 初始化最小记忆。先读取 [memory-protocol.md](references/memory-protocol.md)。该脚本必须以显式项目参数定位记忆，重复运行保留原文件。
+首次进入明确的实际科研项目时，按 [memory-protocol.md](references/memory-protocol.md) 自动检查并运行 `python scripts/init_memory.py --project-root <绝对路径>` 补充最小记忆，沿用已有记录。已确认的项目位置直接使用，保存有价值的研究增量属于默认工作。构建配置包和用户明确指定的只读、临时讨论按本轮范围执行。
 
 ## 工作模式
 
@@ -36,7 +36,7 @@ metadata:
 | 初步想法、评估 IDEA | 记录成熟度，查最接近工作，提出反例和可检验预测 | [证据与创新审查](references/innovation-and-evidence.md) |
 | 设计、实现或执行实验 | 最小实验、预算、变量与失败标准，完成已授权实现 | [实验协议](references/experiment-protocol.md) |
 | 分析结果、实验失败 | 工程正确性 → 比较有效性 → 假设解释 | [实验协议](references/experiment-protocol.md) |
-| 明确进入写作或审稿 | 根据真实证据调用 ARS 的写作、评审或修订流程 | [科研能力路由](references/research-providers.md) |
+| 明确进入写作或审稿 | 写作先核对研究证据与待补项，按实际范围调用 ARS 写作、评审或修订流程 | [研究流程](references/research-workflow.md)、[科研能力路由](references/research-providers.md) |
 
 需要专业检索、综合、研究规划或实验核查时，使用包内 `../academic-research-suite/SKILL.md` 作为 ARS 入口。读取 [research-providers.md](references/research-providers.md) 后按需加载对应 workflow。仅用已给材料的局部讨论可直接完成当前分析。引用技能名称、依赖缺失或返回一份计划，都需与实际使用的能力及已完成工作相对应。
 
@@ -56,4 +56,4 @@ metadata:
 
 ## 结束当前工作
 
-按 [记忆协议](references/memory-protocol.md) 在明确项目和本轮授权内更新真实增量。临时讨论或限定只读任务直接返回分析。简述得到的结论、来源、待验证项和下一步。实验状态区分计划、代码就绪、小规模检查、运行中、完成和分析完毕。工具作者、宣传信息与技能出处记录在包的 README 和上游许可证中，面向用户的科研内容保留学术来源。
+按 [记忆协议](references/memory-protocol.md) 自动保存明确项目内有价值的真实增量，核对实际写入后简述记录位置。用户明确指定的临时、不保存或只读任务直接返回分析。研究状态有实质变化时同步当前状态和交接，纯重复信息沿用原记录。简述结论、来源、待验证项和下一步。实验状态区分计划、代码就绪、小规模检查、运行中、完成和分析完毕。工具作者、宣传信息与技能出处记录在包的 README 和上游许可证中，面向用户的科研内容保留学术来源。

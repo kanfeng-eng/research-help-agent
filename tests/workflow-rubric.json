@@ -14,6 +14,10 @@
     "J": ["Use main-agent role fallback", "Keep research workflow functional", "Use available tools without new API credentials"],
     "K": ["Analyze available paper immediately", "Discuss mechanism, confounding and falsifying controls", "No reading assignment or comprehension prerequisite"],
     "L": ["Bound the absence-of-opportunity judgment to supplied material", "Actually organize task, method, metrics and evidence", "No invented novelty or forced idea quota"],
-    "M": ["Honor explicit guided-reading request", "Provide a small passage and one understanding question"]
+    "M": ["Honor explicit guided-reading request", "Provide a small passage and one understanding question"],
+    "N": ["Plan automatic initialization at confirmed project root", "Save useful paper synthesis and index", "Source restriction alone does not disable memory"],
+    "O": ["Respect explicit temporary no-save scope", "No initialization or memory writes"],
+    "P": ["Use memory/experiments/EXP_007 for analysis and stage metadata", "Use project current-state and handoff files", "Keep raw logs at existing paths"],
+    "Q": ["Check all nine writing-readiness categories with evidence", "Keep missing results and novelty unverified", "Limit writing to supported scope and plan missing evidence"]
   }
 }
