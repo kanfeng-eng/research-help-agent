@@ -1,0 +1,4 @@
+/tmp/
+/memory/
+__pycache__/
+*.py[cod]

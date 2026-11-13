@@ -1,0 +1,8 @@
+{
+  "sourceName": "Codex_科研Skill完整构建提示词.md",
+  "sourceSha256": "2bacb5459c78953d16a18c511c1012512a6b88a3f7c0dbe1057dc91d70338f00",
+  "use": "Build specification supplied by the user; runtime behavior is in AGENTS.md and research-copilot",
+  "primaryProvider": "ARS-Codex",
+  "globalInstall": false,
+  "researchMemoryInitialized": false
+}

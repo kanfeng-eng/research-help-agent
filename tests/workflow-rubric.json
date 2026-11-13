@@ -1,0 +1,16 @@
+{
+  "evaluationType": "Independent read-only scenario review, followed by parent inspection",
+  "automatedCoverage": "Structure, local reference resolution, provider entries, memory initialization and preservation are checked separately by unittest",
+  "cases": {
+    "A": ["Confirm missing research root", "Reuse known direction", "Avoid personal background questionnaire"],
+    "B": ["Respond to the supplied understanding", "Identify input-size confounding", "Keep attention effect unverified"],
+    "C": ["Keep source locations", "Distinguish feature and NMS mechanisms", "Mark snippet-only evidence"],
+    "D": ["Preserve idea as preliminary hypothesis", "Request mechanism or evidence", "Keep novelty unresolved"],
+    "E": ["Inspect actual claimed evidence before upgrading", "Plan closest-work search", "Use research counterargument mode"],
+    "F": ["Design only", "Keep total cost within 2 GPU hours", "Define controls, metrics and failure criteria"],
+    "G": ["Diagnose engineering failure first", "Keep hypothesis untested", "Preserve failed run evidence"],
+    "H": ["Read current state and handoff", "Preserve parked decision", "Respect existing training authorization boundary"],
+    "I": ["Continue cause analysis", "Retain optional writing stage"],
+    "J": ["Use main-agent role fallback", "Keep research workflow functional", "Use available tools without new API credentials"]
+  }
+}

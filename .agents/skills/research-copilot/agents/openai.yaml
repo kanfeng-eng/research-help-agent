@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Copilot"
+  short_description: "科研讨论、跨论文分析、假设审查、最小实验与项目记忆的长期协作"
+  default_prompt: "使用 $research-copilot 读取指定科研项目的记忆，继续当前问题的讨论和验证。"
