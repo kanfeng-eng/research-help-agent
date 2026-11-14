@@ -15,5 +15,12 @@
       "ARS stage-record path mapping into project memory",
       "nine-category evidence check before manuscript writing"
     ]
+  },
+  "orchestrationUpdate": {
+    "version": "1.1.0",
+    "confirmedOn": "2026-11-14",
+    "coreLogicDefinition": "cross-paper synthesis, mechanistic reasoning, counterexample review and minimum discriminating experiment design",
+    "triggers": "known direction starts lineage; substantive evidence or contradictions trigger scoped core analysis",
+    "continuity": "persist processed evidence, status, scope changes and pending actions; reuse duplicate inputs"
   }
 }

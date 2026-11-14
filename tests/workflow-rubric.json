@@ -18,6 +18,11 @@
     "N": ["Plan automatic initialization at confirmed project root", "Save useful paper synthesis and index", "Source restriction alone does not disable memory"],
     "O": ["Respect explicit temporary no-save scope", "No initialization or memory writes"],
     "P": ["Use memory/experiments/EXP_007 for analysis and stage metadata", "Use project current-state and handoff files", "Keep raw logs at existing paths"],
-    "Q": ["Check all nine writing-readiness categories with evidence", "Keep missing results and novelty unverified", "Limit writing to supported scope and plan missing evidence"]
+    "Q": ["Check all nine writing-readiness categories with evidence", "Keep missing results and novelty unverified", "Limit writing to supported scope and plan missing evidence"],
+    "R": ["Automatically start scoped lineage work", "Reuse known direction and constraints", "Record lineage and pending actions without a reading assignment"],
+    "S": ["Run actual synthesis on new evidence", "Separate feature and suppression mechanisms", "Give rival explanations and discriminating minimal design"],
+    "T": ["Reuse completed synthesis", "No fixed paper-count trigger", "No fabricated new insight"],
+    "U": ["Allow one decisive diagnostic to trigger focused re-analysis", "Revise bottleneck interpretation within evidence scope", "Propose the smallest discriminating follow-up"],
+    "V": ["Answer the denominator question directly", "Respect no-save and local-only scope", "Avoid automatic broad research detour"]
   }
 }

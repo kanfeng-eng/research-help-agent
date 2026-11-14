@@ -7,6 +7,8 @@
 | 工作 | 相对 ARS skill 根目录的入口 |
 | --- | --- |
 | 文献检索、研究问题、跨论文综合 | `ars/deep-research/WORKFLOW.md` |
+| 方向明确后的自动谱系追踪 | `ars/deep-research/WORKFLOW.md` 的检索、核查与综合方法，配合本地 [自动研究编排](research-orchestration.md) |
+| 证据达到条件后的核心分析 | `ars/deep-research/WORKFLOW.md` 及 `ars/deep-research/agents/devils_advocate_agent.md`，最小实验设计使用 `ars/experiment-agent/WORKFLOW.md` 的 plan 方法 |
 | 实验设计、执行或结果复核 | `ars/experiment-agent/WORKFLOW.md` |
 | 假设、方法与候选构想的反向审查 | `ars/deep-research/WORKFLOW.md` 与 `ars/deep-research/agents/devils_advocate_agent.md` |
 | 用户明确要求稿件审阅或模拟同行评审 | `ars/academic-paper-reviewer/WORKFLOW.md` |
@@ -25,6 +27,8 @@
 | ARS 工作 | 正式研究记录位置 |
 | --- | --- |
 | deep-research 的论文分析、来源与阅读范围 | `memory/papers/Paper_<ID>.md`、`memory/03_Literature_Index.md`，需要来源台账时放 `memory/papers/<ID>/` |
+| 自动谱系追踪及增量更新 | `memory/Research_Lineage.md`，关系附来源，状态与未完成动作同步当前状态和交接 |
+| run the core logic 的综合与判断 | `memory/04_Cross_Paper_Analysis.md`，链接相关问题、IDEA 和最小实验计划；当前状态记录触发原因与已处理输入 |
 | 研究问题、跨论文综合与近邻检索 | `memory/04_Cross_Paper_Analysis.md`、`memory/05_Research_Gaps.md`、`memory/07_Open_Questions.md` |
 | 假设反向审查与成熟 IDEA | 初步观察和假设进入 `memory/05_Research_Gaps.md`；成熟构想进入 `memory/ideas/IDEA_<ID>.md`，研究员观点进入 `memory/02_Researcher_Ideas.md` |
 | experiment-agent 的 plan、run、validate | `memory/experiments/<ID>/Experiment_Plan.md`、`Experiment_Log.md`、`Result_Analysis.md`；必要的阶段元信息放同一实验子目录 |

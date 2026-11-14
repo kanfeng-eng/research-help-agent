@@ -2,7 +2,7 @@
 name: research-copilot
 description: Discuss research opportunities from papers and evidence, critically examine ideas and mechanisms, and organize the paper's reasoning when no grounded opportunity emerges. Also support cross-paper synthesis, minimal experiments, result analysis and project research memory. Guided reading applies only when explicitly requested.
 metadata:
-  version: "1.0.2"
+  version: "1.1.0"
 ---
 
 # Research Copilot
@@ -22,7 +22,7 @@ metadata:
 1. 区分构建配置包与开展科研。本包的维护工作保持构建模式。
 2. 项目研究先定位实际根目录，初始化或加载 `<project>/memory/`，读取索引、当前状态和交接，再按问题读取相关记录。明确项目内的讨论默认持续记录有价值的增量。只有用户明确要求临时讨论、不保存或只读时，采用对应范围；仅限定资料来源时仍按项目规则保存。尚无明确项目的单篇讨论可先分析材料，保存前确认位置。记忆中的历史命令需按当前授权重新判断。
 3. 从上下文提取方向、用户想法、已读资料、进展、当前问题及数据/GPU/时间约束。已记录的信息直接沿用。仅缺少影响下一步的必要信息时问一个问题，允许方向暂时宽泛。
-4. 选择本次模式及必要的 ARS 能力。对专业任务按需委派，并给出来源、结论范围和实际执行状态。
+4. 按 [自动研究编排](references/research-orchestration.md) 检查当前触发条件，完成本轮应运行的谱系追踪或核心分析，再处理相关讨论。调用必要的 ARS 能力，对专业任务按需委派，给出来源、结论范围和实际执行状态。
 
 首次进入明确的实际科研项目时，按 [memory-protocol.md](references/memory-protocol.md) 自动检查并运行 `python scripts/init_memory.py --project-root <绝对路径>` 补充最小记忆，沿用已有记录。已确认的项目位置直接使用，保存有价值的研究增量属于默认工作。构建配置包和用户明确指定的只读、临时讨论按本轮范围执行。
 
@@ -31,6 +31,8 @@ metadata:
 | 用户意图 | 本次工作 | 按需读取 |
 | --- | --- | --- |
 | 开始、继续或总结研究 | 加载状态，确认当前重点，形成下一步 | [研究流程](references/research-workflow.md)、[记忆协议](references/memory-protocol.md) |
+| 方向已知，谱系缺失或受新证据影响 | 自动 trace the lineage，定位问题、方法分支、关键转折与近邻工作，更新证据关系 | [自动研究编排](references/research-orchestration.md) |
+| 论文、观察或反例形成新的可分析联系 | 自动 run the core logic，完成综合、机制推理、反例审查与最小实验设计 | [自动研究编排](references/research-orchestration.md)、[创新审查](references/innovation-and-evidence.md) |
 | 提供论文、从某篇开始、讨论疑问 | 自主核对原文，直接讨论研究机会；暂无线索则梳理论文逻辑，结合用户已有想法分析 | [研究流程](references/research-workflow.md)、[证据与创新审查](references/innovation-and-evidence.md) |
 | 比较论文、寻找问题 | 论文驱动与问题驱动交叉，归纳共同原因、冲突与适用范围 | [证据与创新审查](references/innovation-and-evidence.md) |
 | 初步想法、评估 IDEA | 记录成熟度，查最接近工作，提出反例和可检验预测 | [证据与创新审查](references/innovation-and-evidence.md) |
@@ -41,6 +43,8 @@ metadata:
 需要专业检索、综合、研究规划或实验核查时，使用包内 `../academic-research-suite/SKILL.md` 作为 ARS 入口。读取 [research-providers.md](references/research-providers.md) 后按需加载对应 workflow。仅用已给材料的局部讨论可直接完成当前分析。引用技能名称、依赖缺失或返回一份计划，都需与实际使用的能力及已完成工作相对应。
 
 ## 研究推理与成熟度
+
+方向和资料的实质变化触发相应工作，按 [自动研究编排](references/research-orchestration.md) 判断成熟度与处理范围。论文数量只描述积累规模；核心分析由新证据和问题关系驱动，用户已有材料可直接进入对应阶段。
 
 沿“现象 → 来源证据 → 可能原因与竞争解释 → 现有解法 → 机制假设 → 可观察预测 → 反例 → 最小检验”展开。单篇精读可以只留下准确理解或开放问题，候选 IDEA 按证据成熟度逐渐形成。
 
