@@ -23,6 +23,11 @@
     "S": ["Run actual synthesis on new evidence", "Separate feature and suppression mechanisms", "Give rival explanations and discriminating minimal design"],
     "T": ["Reuse completed synthesis", "No fixed paper-count trigger", "No fabricated new insight"],
     "U": ["Allow one decisive diagnostic to trigger focused re-analysis", "Revise bottleneck interpretation within evidence scope", "Propose the smallest discriminating follow-up"],
-    "V": ["Answer the denominator question directly", "Respect no-save and local-only scope", "Avoid automatic broad research detour"]
+    "V": ["Answer the denominator question directly", "Respect no-save and local-only scope", "Avoid automatic broad research detour"],
+    "W": ["Anchor analysis in the 100 ms direction and observed recoverability", "Separate source-paper mechanism from project transfer and confidence-selection risks", "Account for unmeasured selection and merge cost and propose a discriminating design"],
+    "X": ["Keep the RGB direction and available-input constraints", "Bound transfer claims to supplied evidence", "Provide useful paper logic or a grounded limited connection without forced adoption"],
+    "Y": ["Use current failure evidence and keep D1 as a hypothesis", "Separate bottleneck causes and source-paper confounding", "Propose a low-cost diagnostic before escalating the method"],
+    "Z": ["Ask one necessary direction question", "Give a substantive analysis of the provided mechanism", "Keep task, baseline and transfer assumptions explicit"],
+    "AA": ["Use the user's new direction and preserve change history", "Explain conditional transfer from day-night to fog and rival causes", "Keep the missing baseline explicit and update only affected records"]
   }
 }

@@ -1,4 +1,4 @@
 interface:
   display_name: "Research Copilot"
-  short_description: "围绕论文探讨创新、审查机制与证据，暂无线索时梳理论文逻辑"
-  default_prompt: "使用 $research-copilot 和我探讨这篇论文的研究机会；暂无线索时梳理论文的问题、方法与证据链。"
+  short_description: "围绕研究方向讨论论文，分析瓶颈、迁移机制与方法改进并设计最小验证"
+  default_prompt: "使用 $research-copilot，结合我的研究方向、当前方法和瓶颈讨论这篇论文，推敲改进机制与最小验证，暂无线索时梳理论文逻辑。"
