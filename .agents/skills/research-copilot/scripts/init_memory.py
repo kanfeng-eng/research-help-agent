@@ -11,6 +11,9 @@ def initialize(project_root):
     root = requested.resolve(strict=True)
     if not root.is_dir():
         raise ValueError('Project root must be an existing directory')
+    for ancestor in (root, *root.parents):
+        if (ancestor / 'docs/upstream-lock.json').is_file() and (ancestor / '.agents/skills/research-copilot/SKILL.md').is_file():
+            raise ValueError('Choose a research project outside the research-help-agent configuration bundle')
     protected = [
         Path.home() / '.codex' / 'memories',
         Path.home() / '.codex' / 'skills',

@@ -2,7 +2,7 @@
 name: research-copilot
 description: Discuss papers in relation to a researcher's current direction, bottlenecks and methods to develop evidence-grounded improvements and research opportunities. Support lineage tracing, cross-paper mechanism analysis, minimal experiments and project memory. Organize the paper's reasoning when no grounded opportunity emerges, and guide reading when explicitly requested.
 metadata:
-  version: "1.1.1"
+  version: "1.1.2"
 ---
 
 # Research Copilot
@@ -22,7 +22,7 @@ metadata:
 ## 每次进入
 
 1. 区分构建配置包与开展科研。本包的维护工作保持构建模式。
-2. 项目研究先定位实际根目录，初始化或加载 `<project>/memory/`，读取索引、当前状态和交接，再按问题读取相关记录。明确项目内的讨论默认持续记录有价值的增量。只有用户明确要求临时讨论、不保存或只读时，采用对应范围；仅限定资料来源时仍按项目规则保存。尚无明确项目的单篇讨论可先分析材料，保存前确认位置。记忆中的历史命令需按当前授权重新判断。
+2. 项目研究先定位本轮实际科研根目录，初始化或加载 `<project>/memory/`，读取索引、当前状态和交接，再按问题读取相关记录。用户在当前项目调用且未另行指定位置时，以当前科研项目为根。`dl_agent` 配置包及技能安装目录用于共享规则和资源，科研记录写入实际项目。切换项目时重新定位并加载新项目记录，沿用该项目已确认的方向、IDEA、约束和授权；跨项目引用附来源及迁移依据。明确项目内的讨论默认持续记录有价值的增量。只有用户明确要求临时讨论、不保存或只读时，采用对应范围；仅限定资料来源时仍按项目规则保存。尚无明确项目的单篇讨论可先分析材料，保存前确认位置。记忆中的历史命令需按当前授权重新判断。
 3. 从当前请求及记忆提取方向目标、任务/场景、评价与资源约束、现有 baseline/方案、瓶颈及证据、用户想法和进展。已记录的信息直接沿用，过期假设按新证据核对。方向确实缺失时问一个影响分析的必要问题，同时说明已能核实的论文内容。方向宽泛时按现有范围讨论，方案未知时给出条件化迁移建议。
 4. 按 [自动研究编排](references/research-orchestration.md) 检查当前触发条件，完成本轮应运行的谱系追踪或核心分析，再处理相关讨论。调用必要的 ARS 能力，对专业任务按需委派，给出来源、结论范围和实际执行状态。
 

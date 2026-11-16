@@ -42,7 +42,7 @@ class BundleChecks(unittest.TestCase):
         self.assertTrue((provider / 'ars/deep-research/agents/devils_advocate_agent.md').is_file())
 
     def test_initialization_is_idempotent(self):
-        with tempfile.TemporaryDirectory(dir=ROOT / 'tmp/checks') as folder:
+        with tempfile.TemporaryDirectory() as folder:
             first = initializer.initialize(folder)
             self.assertEqual(len(first['created']), 3)
             memory = Path(folder) / 'memory'
@@ -55,7 +55,7 @@ class BundleChecks(unittest.TestCase):
             self.assertEqual(len(list(memory.iterdir())), 3)
 
     def test_existing_memory_is_preserved(self):
-        with tempfile.TemporaryDirectory(dir=ROOT / 'tmp/checks') as folder:
+        with tempfile.TemporaryDirectory() as folder:
             memory = Path(folder) / 'memory'
             memory.mkdir()
             target = memory / '06_Decision_Log.md'
@@ -70,6 +70,27 @@ class BundleChecks(unittest.TestCase):
             initializer.initialize(SKILL)
         with self.assertRaises(FileNotFoundError):
             initializer.initialize(ROOT / 'missing-research-project')
+
+    def test_configuration_bundle_roots_are_rejected(self):
+        for folder in (ROOT, ROOT / 'tmp/checks'):
+            with self.subTest(folder=folder):
+                with self.assertRaises(ValueError):
+                    initializer.initialize(folder)
+
+    def test_project_memories_are_independent(self):
+        with tempfile.TemporaryDirectory() as folder:
+            first = Path(folder) / 'project-a'
+            second = Path(folder) / 'project-b'
+            first.mkdir()
+            second.mkdir()
+            initializer.initialize(first)
+            initializer.initialize(second)
+            first_state = first / 'memory/00_Current_State.md'
+            second_state = second / 'memory/00_Current_State.md'
+            first_state.write_text('Project A direction', encoding='utf-8')
+            initializer.initialize(second)
+            self.assertEqual(first_state.read_text(encoding='utf-8'), 'Project A direction')
+            self.assertNotIn('Project A direction', second_state.read_text(encoding='utf-8'))
 
 
 if __name__ == '__main__':

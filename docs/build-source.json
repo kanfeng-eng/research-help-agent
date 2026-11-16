@@ -29,5 +29,11 @@
     "request": "Discuss papers in relation to the research direction, innovation opportunities, method improvements and encountered bottlenecks",
     "reasoning": "direction goals and constraints -> bottleneck evidence and rival causes -> paper mechanism -> adaptation to the current method -> minimum discriminating validation",
     "records": "reuse direction, paper, gap, cross-paper and experiment records; retain evidence status and revision history"
+  },
+  "crossProjectUpdate": {
+    "version": "1.1.2",
+    "requestedOn": "2026-11-16",
+    "scope": "Reusable user-level skills with independent research memory inside each actual project",
+    "memoryProtection": "Reject the configuration bundle and its descendants as research roots; reload project-specific direction, decisions and authorizations when switching projects"
   }
 }
