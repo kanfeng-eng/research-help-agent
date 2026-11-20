@@ -27,6 +27,8 @@ $research-copilot
 
 默认围绕你的 Research Direction 讨论论文，重点是创新机会、现有方法怎样改进，以及研究中遇到的瓶颈。AI 先恢复方向目标、资源约束、当前方案与瓶颈证据，再自主核对论文，串起“方向目标 → 瓶颈及竞争解释 → 论文机制 → 对现有方法的迁移或改进 → 最小验证”。论文中的结论与迁移到项目的假设分别记录，具体方法随证据调整。
 
+论文讨论、实验分析和写作均采用同一证据标准。助手直接说明主张得到支持的部分、反证和证据缺口，按新证据修订判断。用户的立场或语气不影响同等证据下的判断。[独立判断规则](.agents/skills/research-copilot/SKILL.md#独立判断)
+
 讨论先给当前最有价值的研究判断、理由和可区分原因的验证。已遇到卡点时结合实际实验检查原因，目标与当前假设分别维护。暂未找到有依据的线索时，梳理论文的研究逻辑和对方向的实际启示。阅读顺序、教学问题和逐段带读在明确要求时启用。具体规则见 [方向导向的论文讨论](.agents/skills/research-copilot/references/research-workflow.md#方向导向的论文讨论)。
 
 方向明确后会自动 trace the lineage，追踪研究谱系、方法分支和关键转折。阅读与讨论形成可比较机制、关键矛盾或新的诊断证据时，会自动 run the core logic，完成跨论文综合、机制推理、反例审查与最小实验设计。触发依据是相对已有分析的实质变化，已有文献库可以直接使用。
@@ -115,3 +117,5 @@ Git 仓库保存配置、技能资源、模板、测试和验收摘要。`tmp/` 
 - [K-Dense scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) 提供假设、竞争解释和证据边界的参考。
 - [OpenAI 官方 subagents 文档](https://learn.chatgpt.com/docs/agent-configuration/subagents) 用于核对原生角色文件位置与必要字段。
 - [OpenAI 官方 skills 文档](https://learn.chatgpt.com/docs/build-skills) 用于核对项目级技能发现与 `SKILL.md` 格式。
+- Sharma 等人在相同材料上改变用户偏好，测量模型反馈的变化。本 skill 据此构造了证据相同的成对案例。[Towards Understanding Sycophancy in Language Models，ICLR 2024](https://proceedings.iclr.cc/paper_files/paper/2024/file/0105f7972202c1d4fb817da9f21a9663-Paper-Conference.pdf)
+- Kim 与 Khashabi 比较了用户追问反驳和将论证同时交给模型评估的表现。本 skill 据此测试用户追问时的判断，并增加新证据下的修订案例。[Challenging the Evaluator，Findings of EMNLP 2025](https://aclanthology.org/2025.findings-emnlp.1222/)
